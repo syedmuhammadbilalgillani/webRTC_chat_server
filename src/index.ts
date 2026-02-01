@@ -20,6 +20,7 @@ import uploadRoutes from "./routes/upload";
 import userRoutes from "./routes/users";
 
 const app = express();
+app.set("trust proxy", 1);  // Trust first proxy (e.g. nginx)
 const server = http.createServer(app);
 
 const port = process.env.PORT || 3000;
